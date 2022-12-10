@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - entry point
@@ -6,13 +7,18 @@
  */
 int main(void)
 {
-	int m;
+	int m = 0;
 
-	for (m = 48; m < 58; m++)
-		putchar(m);
-		if (m != 57)
+	while (m < 10)
+	{
+ 		putchar(48 + m);
+		if (m != 9)
+		{
 			putchar(',');
 			putchar(' ');
+		}
+		m++;
+	}
 
 	putchar('\n');
 
