@@ -1,26 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - entry point
- * Return: Always 0
+ * main - maain block
+ * Return: 0
  */
 int main(void)
 {
-	int o, p;
+	int i, j;
 
-	for (o = 0; o < 100; o++)
+	for (i = 0; i < 100; i++)
 
-		for (p = 0; p < 100; p++)
+		for (j = 0; j < 100; j++)
 
-			if (o < p)
+			if (i < j)
 
-				putchar((o / 10) + 48);
-				putchar((o % 10) + 48);
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
-				putchar((p / 10) + 48);
-				putchar((p % 10) + 48);
-				if (o != 98 || p != 99)
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
 
 					putchar(',');
 					putchar(' ');
