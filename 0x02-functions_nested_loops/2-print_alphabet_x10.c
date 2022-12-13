@@ -2,16 +2,24 @@
 
 /**
  * print_alphabet_x10 - prints alpha 10 times
+ * followed by a new line
  */
-void print_alphabet_x10(void)
+void print_alphabet_x10(void);
 {
-	int ten;
-	char la;
+	char ch;
+	int i;
 
-	for (ten = 0; ten <= 9; ten++)
+	i = 0;
+
+	while (i < 10)
 	{
-		for (la = 'a'; la <= 'z'; la++)
-			_putchar(la)
+		ch = 'a';
+		while (ch <= 'z')
+		{
+			_putchar(ch);
+			ch++;
+		}
 		_putchar('\n');
+		i++;
 	}
 }
