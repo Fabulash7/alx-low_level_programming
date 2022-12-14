@@ -1,28 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - pints first 50 fibonacci numbers, starting with 1 and 2
- * separated by a comma followed by a space
- *
- * Return: ALways 0
+ * main - something
+ * Return: something
  */
+
 int main(void)
+
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+	long int i, j, k, l;
 
-	for (count = 0; count < 50; count++)
+	j = 1;
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
+		if (j != 20365011074)
+		{
+			printf("%ld, ", j);
+		}
 
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			print("\n");
 		else
-			printf(",");
+		{
+			printf("%ld\n", j);
+		}
+
+		l = j + k;
+		j = k;
+		k = l;
 	}
 
 	return (0);
