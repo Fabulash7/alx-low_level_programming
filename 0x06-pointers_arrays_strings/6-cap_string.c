@@ -1,35 +1,34 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
+#include <ctype.h>
 /**
- * cap_string - capitalizes every first letter of a word in a string
- * separators of words are: space, tabulation
- * new line
- * @s: POinter to string
- *
- * Return: Pointer to s
+ * cap_string - check the code for Holberton School students.
+ *@n : variable
+ * Return: return
  */
-char *cap_string(char *s)
-{
-	int count;
 
-	count = 0;
-  while (s[count] != '\0')
-	{
-		if (s[0] >= 97 && s[0] <= 122)
-		{
-			s[0] = s[0] - 32;
-		}
-		if (s[count] == ' ' || s[count] == '\t' || s[count] == '\n'
-		    || s[count] == ',' || s[count] == ';' || s[count] == '.'
-		    || s[count] == '.' || s[count] == '!' || s[count] == '?'
-		    || s[count] == '"' || s[count] == '(' || s[count] == ')'
-		    || s[count] == '{' || s[count] == '}')
-		{
-			if (s[count + 1] >= 97 && s[count + 1] <= 122)
-			{
-				s[count + 1] = s[count + 1] - 32;
-			}
-		}
-		count++;
-	}
-	return (s);
+char *cap_string(char *n)
+{
+int i = 0;
+
+while (n[i] != '\0')
+{
+if (n[0] <= 122 && n[0] >= 97)
+{
+n[0] = n[0] - 32;
+}
+if (n[i] == 32 || n[i] == 46 || n[i] == '\t' || n[i] == '\n'
+|| n[i] == 44 || n[i] == 59 || n[i] == '!' || n[i] == '?'
+|| n[i] == '(' || n[i] == ')' || n[i] == '{' || n[i] == '}')
+{
+if (n[i + 1] <= 122 && n[i + 1] >= 97)
+{
+n[i + 1] = n[i + 1] - 32;
+}
+}
+i++;
+}
+return (n);
 }
